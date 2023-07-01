@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -40,4 +40,4 @@ jobs:
         with:
           message-id: cloudflare-preview-url
           message: |
-            プレビューURL: ${{ steps.cloudflare-publish.outputs.url }}
+            プレビューURL: ${{ steps.cloudflare-publish.outputs.alias }}
