@@ -34,7 +34,7 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.head_ref }}
 
-      - if: github.event == 'pull_request'
+      - if: github.event_name == 'pull_request'
         uses: mshick/add-pr-comment@v2
         with:
           message-id: cloudflare-preview-url
